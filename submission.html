@@ -32,12 +32,14 @@
             //(GET method) get your query string values by field
             var firstName = GetURLParameterValue("first");
             var lastName = GetURLParameterValue("last");
+            var nickName = GetURLParameterValue("nickname")
             //populate desired HTML elements with desired values
             //we pass in the id name of the HTML element we want
             //to populate with the query string text
             // (e.g., id="fname" is found on the HTML element we
             // want to populate with text)
             document.getElementById("fname").textContent = firstName;
+            document.getElementById("nname").textContent = nickName;
             document.getElementById("lname").textContent = lastName;
         };
 
@@ -65,10 +67,12 @@
         <caption>First and Last Name Submitted on the Previous Page</caption>
         <tr>
             <th>First Name</th>
+            <th>Nickname</th>
             <th>Last Name</th>
         </tr>
         <tr>
             <td id="fname"></td>
+            <td id="nname"></td>
             <td id="lname"></td>
         </tr>
     </table>
